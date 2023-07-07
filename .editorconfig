@@ -1,0 +1,30 @@
+# Top-most EditorConfig file
+root = true
+
+# Indentation style
+[*]
+indent_style = space
+indent_size = 2
+
+# Encoding and line endings
+[*.{rb,erb}]
+charset = utf-8
+end_of_line = lf
+
+# Trim trailing whitespace
+[*.{rb,erb}]
+trim_trailing_whitespace = true
+
+# Maximum line length
+[*.{rb,erb}]
+max_line_length = 100
+
+# Ruby-specific settings
+[*.rb]
+# Align parameters if wrapped to multiple lines
+align_multiline_parameters = true
+
+# ERB-specific settings
+[*.erb]
+# Enable ERB tags
+enable_erb_tags = true
