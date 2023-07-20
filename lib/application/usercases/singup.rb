@@ -1,4 +1,6 @@
-require_relative "../../domain/entity/user"
+# frozen_string_literal: true
+
+require_relative '../../domain/entity/user'
 
 class Signup
   def initialize(user_repository)

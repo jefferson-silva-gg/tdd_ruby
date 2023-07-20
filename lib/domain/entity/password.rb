@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'openssl'
 require 'securerandom'
 
@@ -12,7 +14,7 @@ class Password
   end
 
   def self.create(password, salt = nil)
-    raise StandardError.new 'Invalid password' unless password.match(
+    raise StandardError, 'Invalid password' unless password.match(
       /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z])(?=.*[!#@$%^&*(-)+=]).*$/
     )
 

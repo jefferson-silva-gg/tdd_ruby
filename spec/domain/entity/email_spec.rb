@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'domain/entity/email'
 
 describe Email, type: :unit do
@@ -7,9 +9,9 @@ describe Email, type: :unit do
 
       expect(email.value).to eq('john.doe@example.com')
     end
-    
+
     it 'should not create an email if it is invalid' do
-      expect{Email.new 'john'}.to raise_error(StandardError, 'Invalid email')
+      expect { Email.new 'john' }.to raise_error(StandardError, 'Invalid email')
     end
   end
 end

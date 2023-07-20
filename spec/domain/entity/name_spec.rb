@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'domain/entity/name'
 
 describe Name, type: :unit do
@@ -9,7 +11,7 @@ describe Name, type: :unit do
     end
 
     it 'should not create a name if it is invalid' do
-      expect{Name.new 'John'}.to raise_error(StandardError, 'Name must be at least 2 characters long')
+      expect { Name.new 'John' }.to raise_error(StandardError, 'Name must be at least 2 characters long')
     end
   end
 end

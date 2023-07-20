@@ -1,6 +1,8 @@
-require_relative "name"
-require_relative "email"
-require_relative "password"
+# frozen_string_literal: true
+
+require_relative 'name'
+require_relative 'email'
+require_relative 'password'
 
 class User
   attr_reader :name, :email, :password, :age
@@ -13,9 +15,9 @@ class User
     @password = password
     @age = age
 
-    if age < 18
-      raise StandardError.new 'Invalid age'
-    end
+    return unless age < 18
+
+    raise StandardError, 'Invalid age'
   end
 
   def self.create(name, email, password, age)

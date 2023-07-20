@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Name
   attr_reader :value
 
@@ -7,9 +9,10 @@ class Name
   end
 
   private
+
   def validator
-    if @value.split(' ').length < 2
-      raise StandardError.new 'Name must be at least 2 characters long'
-    end
+    return unless @value.split.length < 2
+
+    raise StandardError, 'Name must be at least 2 characters long'
   end
 end

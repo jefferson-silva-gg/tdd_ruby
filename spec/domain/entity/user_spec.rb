@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'domain/entity/user'
 
 describe User, type: :unit do
@@ -13,7 +15,7 @@ describe User, type: :unit do
     end
 
     it 'should get error when age is invalid' do
-      expect{User.create(name, email, password, 17)}.to raise_error(StandardError, 'Invalid age')
+      expect { User.create(name, email, password, 17) }.to raise_error(StandardError, 'Invalid age')
     end
   end
 end

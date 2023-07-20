@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'application/usercases/singup'
 require 'application/usercases/login'
 require 'domain/entity/user'
